@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+
+    <!-- Style CSS  -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+    <!-- Style css -->
+    <script type="text/css" src="../css/style.css"></script>
+
+    <!-- Import Main.js -->
+    <script type="text/javascript" src="../js/main.js"></script>
+
+
+    <!-- Header -->
+
+    <nav>
+        <div class="nav-wrapper black" style="font-style: OpenSans; height: 72px;">
+            <a href="../index.html" class="brand-logo" style="font-size: 20px;font-weight: 600; margin-left: 89px">Guia Siproquim 2</a>
+            <form class="Search box-form-header-interna-busca">
+                <input style="border:none; margin: 0; padding: 0; box-shadow: none" placeholder="O que você procura?">
+                </input>
+                <a class="btn-small" style="padding:0;margin:0;position:absolute;right:0;background:none;color:#777777;background:none;box-shadow:none;">
+                    <i class="material-icons" style="width:35px;height:40px;line-height:40px;color:#222222;">search</i>
+                </a>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <div class="container" style="margin-left: 89px; margin-top:20px; font-size: 16px;">
+        <div class="transparent breadcrumb">
+            <div class="col s12">
+                <a href="../index.html" class="breadcrumb blue-text">Guia Siproquim2</a>
+                <a href="#!" class="breadcrumb blue-text">Cadrasto e autoatendimento</a>
+                <a class="breadcrumb blue-text" style="font-weight: bold">Emissão de requerimento cadastral</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-left: 89px">
+        <div class="font" style="width: full; margin-bottom: 40px;">
+
+            <div class="col xl12 l12 m12 s12">
+                <p class="titulo-resultado" style="font-size: 24px;">Emissão de requerimento cadastral</p>
+                <p>Permite ao usuário a emissão de requerimentos do tipo CRC, CRC+CLF, CFL e AE.</p>
+            </div>
+
+            <!-- Requerimento CRC -->
+           
+			<a href="requerimento_crc.html">
+			   <div class="col xl12 l12 m12 s12 btn-requerimentos hoverbox">                
+					<p class="titulo-requerimento">Requerimento CRC</p>
+					<p style="font-size: 18px;padding-right: 35px;">O Certificado de Registro Cadastral - CRC, tem por finalidade o registro quando se trata de uma matriz que não exerce atividades com produtos químicos controlados.                              
+				</div>
+			</a>
+            <!-- Requerimento CRC + CLF -->           
+            <div class="col xl12 l12 m12 s12 btn-requerimentos hoverbox">
+                <p  class="titulo-requerimento">Requerimento CRC + CLF</p>
+                <p style="font-size: 18px;padding-right: 35px;">Requerimento conjunto do CRC (Certificado de Registro Cadastral) e do CLF (Certificado de Licença de Funcionamento).</p>
+            </div>
+            
+            <!-- Requerimento CLF -->
+            <div class="col xl12 l12 m12 s12 btn-requerimentos hoverbox">
+                <p class="titulo-requerimento">Requerimento CLF</p>
+                <p style="font-size: 18px;padding-right: 35px;">O Certificado de Licença de Funcionamento- CLF, habilita a pessoa jurídica a exercer atividade não eventual com produtos químicos sujeitos a controle e fiscalização.</p>
+            </div>
+
+            <!-- Requerimento AE -->
+            <div class="col xl12 l12 m12 s12 btn-requerimentos hoverbox" style="margin-bottom: 352px">
+                <p class="titulo-requerimento">Requerimento AE</p>
+                <p style="font-size: 18px;padding-right: 35px;">A Autorização Especial - AE habilita a pessoa física ou jurídica a exercer, eventualmente, atividade com produtos químicos sujeitos a controle e fiscalização.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="row footer"></div>
+</body>
+
+</html>

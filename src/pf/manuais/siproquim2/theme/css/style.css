@@ -1,0 +1,443 @@
+/* Global */
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #777777;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #777777;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #777777;
+}
+
+.brand-logo {
+    color: #fff !important;
+}
+
+textarea {
+    height: 160px;
+    
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 #ebedee;
+    background-color: #ffffff;
+    border: solid 1px #a8aeb2;
+}
+
+.background-busca {
+    font-style: OpenSans;
+    width: full;
+    height: 294px;
+    background-color: #384750;
+}
+
+.buscar {
+    text-align: center;
+    width: 576px;
+    height: 60px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    border: solid 1px #a7bbc3;
+    padding-left: 15px;
+}
+
+.header-titulo {
+    margin-top: 48px;
+    margin-bottom: 35px;
+    color: #f5a623;
+    font-weight: bold;
+    text-align: center
+}
+
+.topicos {
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: 0px;
+}
+
+.icon {
+    color: #f5a623;
+    width: 7px;
+    height: 11px;
+    font-weight: bold;
+    float: left;
+    margin-right: 21px
+}
+
+.subtitulo {
+    font-size: 28px;
+    color: #474747;
+    font-weight: bold;
+    text-align: left;
+}
+
+.linha {
+    height: 2px;
+    opacity: 0.46;
+    border: solid 1px #979797;
+    text-align: center
+}
+
+.subtitulo-duvidas {
+    
+    height: 26px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.93;
+    letter-spacing: normal;
+    color: #474747;
+    color: var(--greyish-brown);
+    clear: both;
+}
+
+.box-duvidas {
+    width: 449px !important;
+    height: 158px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 2px #ebedee;
+    text-align: center;
+}
+
+.texto-duvidas {
+    padding-top: 28px;
+    padding-left: 121px;
+    padding-right: 37px;
+    text-align: left
+}
+
+.icon-duvidas {
+    padding-top: 50px;
+    padding-left: 30px;
+    float: left;
+    width: 95px;
+    height: 31px;
+    color: #979797
+}
+
+.box-container {
+    width: 949px;
+    height: 167px;
+    margin-bottom: 131px;
+    margin-top: 40px;
+}
+
+.box-form-busca-index {
+    background: #ffffff;
+    width: 100%;
+    border: solid 1px #a7bbc3;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: 0;
+    height: 60px;
+    margin: 15px 80px 0 0;
+    position: relative;
+}
+
+.input-busca {
+    width: 782px;
+    height: 40px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    border: solid 1px #a7bbc3;
+    padding-left: 5px;
+    margin-bottom: 5px
+}
+
+.box-form-busca-index input {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border: none;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+.footer {
+    width: full;
+    height: 40px;
+    background-color: #263239;
+    border: solid 1px #979797;
+    margin-bottom: 0px;
+}
+
+.font {
+    font-style: OpenSans;
+    font-size: 18px;
+    color: #384750;
+}
+
+.retangulo-dicas {
+    width: 780px;
+    height: 71px;
+    border-radius: 5px;
+    background-color: #eaf1df;
+    border: solid 0.5px #b9c3a9;
+    margin-bottom: 26px;
+}
+
+.retangulo-importante {
+    width: 780px;
+    height: 71px;
+    border-radius: 5px;
+    background-color: #737e84;
+}
+
+.dropdown-requerimento {
+    color: #384750;
+    width: 772px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #f5f6f6;
+    padding-top: 5px;
+    position: relative;
+}
+
+.pergunta-artigo {
+    width: 180px;
+    height: 70px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 #ebedee;
+    background-color: #ffffff;
+    border: solid 1px #a8aeb2;
+    margin-left: 496px;
+}
+
+.font-h2 {
+    font: OpenSans-Semibold;
+    font-size: 24px;
+    color: #474747;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px
+}
+
+.resposta-artigo {
+    width: 116px;
+    height: 29px;
+    opacity: 0.8;
+    font-size: 18px;
+    line-height: 1.67;
+    text-align: center;
+    color: #384750;
+}
+
+.dicas-2 {
+    width: 760px;
+    height: 159px;
+    border-radius: 5px;
+    background-color: #eaf1df;
+    border: solid 0.5px #b9c3a9;
+}
+
+.numeracao-circulo {
+    width: 22px;
+    height: 22px;
+    background-color: #384750;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.breadcrumb {
+    font-size: 16px;
+}
+
+.breadcrumb-pesquisa {
+    font-size: 14px;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #384750;
+    opacity: 0.5;
+}
+
+.breadcrumb::before {
+    content: '\E5CC';
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    top: -6px;
+    opacity: 0.4;
+    color: #384750;
+}
+
+.breadcrumb-pesquisa::before {
+    content: '\E5CC';
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    top: -6px;
+    opacity: 0.4;
+    color: #384750;
+}
+
+.size-x {
+    width: 22px;
+    height: 22px;
+}
+
+.circulo {
+    background: #263239;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin-right: 10px;
+    margin-top: 3px
+}
+
+.collapso {
+    width: 762px;
+    background-color: #fff;
+    border: none;
+    box-shadow: none
+}
+
+.box-form-header-interna-busca {
+    background: #ffffff;
+    width: 300px;
+    float: right;
+    border: solid 1px #a7bbc3;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    padding: 0;
+    height: 40px;
+    margin: 15px 80px 0 0;
+    position: relative;
+}
+
+.box-form-header-interna-busca input {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border: none;
+}
+
+.btn-large {
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 #ebedee;
+    background: none;
+    border: solid 1px #a8aeb2;
+    text-transform: capitalize;
+    line-height: 60px;
+    height: 70px;
+    width: 180px;
+    color: #a8aeb2;
+    margin: 9px;
+}
+
+.btn-smalll{
+    border-radius: 5px;
+    box-shadow: 0 2px 6px 0 #ebedee;
+    background: none;
+    border: solid 1px #a8aeb2;
+    text-transform: capitalize;
+    line-height: 60px;
+    height: 30px;
+    width: 50px;
+    color: #121213;
+    margin: 9px;
+}
+
+.btn-large:hover {
+    background: #EAF1DF;
+}
+
+.btn-requerimentos {
+    height: 142px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border: solid 1px #a7bbc3;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.btn-requerimento:hover {
+    background: #263239
+}
+
+.titulo-resultado {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: #474747;
+    font-weight: bold;
+    text-align: left
+}
+
+.titulo-requerimento {
+    margin-top: 15px;
+    margin-bottom: -10px;
+    color: #474747;
+    text-align: left;
+    font-size: 24px;
+}
+
+.container-acessar {
+    width: 775px;
+}
+
+a.hover:hover {
+    font-weight: bold;
+}
+
+div.hover-indice:hover {
+    margin-left: 1px;
+}
+
+.text-rodape {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+div.hoverbox:hover{
+    border-color:#42a5f5;
+    margin-left: 1px;
+}

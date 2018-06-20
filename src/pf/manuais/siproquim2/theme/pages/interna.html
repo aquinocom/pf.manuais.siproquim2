@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="++theme++siproquim2/favicon.ico" type="image/x-icon">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="++theme++siproquim2/css/materialize.min.css" media="screen,projection" />
+
+    <!-- Style CSS  -->
+    <link rel="stylesheet" type="text/css" href="++theme++siproquim2/css/style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- JQuery -->
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="++theme++siproquim2/js/materialize.min.js"></script>
+
+
+    <!-- Import Main.js -->
+    <script type="text/javascript" src="++theme++siproquim2/js/main.js"></script>
+
+    <title>SIPROQUIM2</title>
+
+    <link id="css_link_plone" />
+    <style type="text/css">
+        select{display: block;}
+        #content {
+            font-size: 100%;
+        }
+        div.row {
+            float: inherit;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <div class="row">
+        <nav>
+            <div class="nav-wrapper black" style="height: 72px;">
+                <a href="++theme++siproquim2/index.html" class="brand-logo" style="font-size: 20px;font-weight: 600; margin-left: 89px">Guia Siproquim 2</a>
+
+                <form class="Search box-form-header-interna-busca" id="busca_home">
+                    <input style="border:none; margin: 0; padding: 0; box-shadow: none" placeholder="O que você procura?" name="SearchableText" />
+                    
+
+                    <a class="btn-small" style="padding:0;margin:0;position:absolute;right:0;background:none;background:none;box-shadow:none;">
+                        <i class="material-icons" style="width:35px;height:40px;line-height:40px;color:#222222;">search</i>
+                    </a>
+                </form>
+
+            </div>
+        </nav>
+    </div>
+
+    <div class="container" style="margin-left: 89px">
+        <div class="breadcrumb" style="background-color: transparent;">
+            <div class="col s12">
+               
+            </div>
+        </div>
+        
+        <div id="main_content" class="row"></div>
+        
+    </div>
+    <!-- Rodapé Artigo útil?-->
+    <div class="container" style="width:100%;margin-bottom:80px;">
+        <div style="width: 1116px;height: 2px;opacity: 0.46;border: solid 1px #979797;margin-bottom: 20px"></div>
+        <div id="info_atualizacao"></div>
+           <div class="row">
+			  <div class="col col s6 offset-s3" style="text-align:center;">
+                    <h2 class="font-h2">Este artigo foi útil?</h2>
+                    <div class="row" style="margin:0 auto;">
+                            <button type="button" onclick="sim()" id="feedback-sim" class="btn-large" >Sim</button>                   
+                            <button type="button" onclick="nao()" id="feedback-nao" class="btn-large" >Não</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="feedback-text-agradecimento" style="display: none;">
+                <div class="col s6 offset-s3" style="text-align:center;">
+                        <h6>Obrigado pelo seu retorno!</h6>
+                </div>
+                 </div>
+	    		<div class="row" id="feedback-text" style="display: none;">
+						<div class="col s6 offset-s3" style="text-align:center;">
+								<h6> Lamentamos por isso! Diga como podemos melhorar: </h6>
+								<textarea cols="50"></textarea>
+								<a class="btn-large" style="margin:2% 0;">Enviar Resposta</a>
+						</div>
+				</div>
+        </div>
+    <!-- Footer -->
+    <div class="row footer"></div>
+</body>
+
+</html>

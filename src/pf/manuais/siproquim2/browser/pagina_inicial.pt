@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html metal:use-macro="context/main_template/macros/master">
+<head>
+	<title></title>
+</head>
+<body metal:fill-slot="main">
+<style type="text/css">
+	#portal-breadcrumbs{display: none;}
+</style>
+	<!-- Cadastro e Auto atendimento -->
+	<div>
+	    <div id="topico2" class="row" >
+	        <div >
+	            <div class="col xl12 l12 m12 s8" >
+	                <p class="subtitulo">Cadastro e Auto atendimento</p>
+	            </div>
+
+	            <!-- Cadastro e Auto atendimento (Coluna 1)-->
+	            <div class="col s4 topicos">
+	                <div class="row hover-indice">
+	                    <a href="#">Acessar o sistema
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="./pages/emissao_requerimento.html">Emissão de Requerimento cadastral
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="#">Emissão de Requerimento de renovação
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="#">Realizar Alteração Cadastral
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="#">Renovação com Alteração Cadastral
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+
+	            </div>
+
+	            <!-- Tópicos Populares (Coluna 2) -->
+	            <div class="col s4 topicos">
+	                <div class="row hover-indice">
+	                    <a href="#">Solicitar Cancelamento
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="#">Enviar comunicado
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="#">Consultar documento
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="#">Imprimir Certificado
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	                <div class="row hover-indice">
+	                    <a href="#">Habilitar/Desabilitar Operadores
+	                        <i class="material-icons icon">navigate_next</i>
+	                    </a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+</body>
+</html>

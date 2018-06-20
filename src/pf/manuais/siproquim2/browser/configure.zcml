@@ -1,0 +1,43 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="pf.manuais.siproquim2">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="pf.manuais.siproquim2.interfaces.IPfManuaisSiproquim2Layer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="pf.manuais.siproquim2"
+      type="plone"
+      directory="static"
+      />
+
+  <!-- Pages -->
+  <browser:page
+      name="pagina-inicial"
+      for="*"
+      class=".view.PaginaInicialView"
+      permission="zope2.View"
+      layer="pf.manuais.siproquim2.interfaces.IPfManuaisSiproquim2Layer"
+      template="pagina_inicial.pt"
+    />
+
+  <!-- Pages -->
+  <browser:page
+      name="portlet_menu_nesta_pagina"
+      for="*"
+      class=".view.PaginaInicialView"
+      permission="zope2.View"
+      layer="pf.manuais.siproquim2.interfaces.IPfManuaisSiproquim2Layer"
+      template="portlet_menu_nesta_pagina.pt"
+    />
+
+
+
+</configure>
