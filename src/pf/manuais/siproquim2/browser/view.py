@@ -3,7 +3,7 @@
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
-from Products.ATContentTypes.interfaces import IATNewsItem
+from Products.ATContentTypes.interfaces import IATFolder
 from plone.memoize.instance import memoize
 from DateTime import DateTime
 
@@ -24,15 +24,38 @@ class PaginaInicialView(BrowserView):
             return False
 
     @memoize
-    def results(self, path):
+    def getTopicosPopulares(self):
+        """Retorna o resultado de uma consulta no catalog.
+        """
+        # import pdb; pdb.set_trace()
+        catalog = getToolByName(self, 'portal_catalog')
+        categoria = "Tópicos populares"
+        folders = catalog(Subject = categoria)
+        return folders
+
+    @memoize
+    def getFolders(self):
         """Retorna o resultado de uma consulta no catalog.
         """
         catalog = getToolByName(self, 'portal_catalog')
-        news = catalog(object_provides=IATNewsItem.__identifier__,
-                               path=path,
-                               sort_on='effective',
-                               sort_order='reverse')
-        return news
+        path = '/'.join(self.context.getPhysicalPath())
+        folders = catalog(object_provides=IATFolder.__identifier__,
+                          path={'query':path, 'depth':1},
+                          sort_on='getObjPositionInParent',
+
+                         )
+        return folders
+
+    @memoize
+    def getFolderItens(self, path):
+        """Retorna o resultado de uma consulta no catalog.
+        """
+        # import pdb; pdb.set_trace()
+        catalog = getToolByName(self, 'portal_catalog')
+        folders = catalog(path={'query':path, 'depth':1},
+                          sort_on='getObjPositionInParent',
+                         )
+        return folders
 
     @memoize
     def listNews(self, news):
