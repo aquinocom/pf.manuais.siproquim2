@@ -1,32 +1,18 @@
-<div metal:define-macro="portlet">
+<div class="box_portlet_pagina" metal:define-macro="portlet">
+    
+    <h6 class="subtitulo_portlet">NESTA PÁGINA</h6>
 
-    <div style="width: 336px; position: fixed;">
-        <div class="row" style="width: 315px; /*! height: 190px; */ margin: 0px;">
-            <h6>
-                <b>NESTA PÁGINA</b>
-            </h6>
-            <div class="card lime lighten-5 " style="border-left:  3px solid #cfd8dc;">
-                <div class="card-content">
-                    <a class="hover" href="#registrar-conta" style="color: #474747">
-                        <p>Registrar conta</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card amber lighten-4" style="border-left:  3px solid #ffd54f;margin-top: -15px">
-                <div class="card-content">
-                    <a class="hover" href="#topico2" style="color: #474747">
-                        <p>Acessa o Siproquim 2</p>
-                    </a>
-                </div>
-            </div>
-            <div class="card lime lighten-5" style="border-left:  3px solid #cfd8dc;margin-top: -15px">
-                <div class="card-content">
-                    <a class="hover" href="#mudar-tema-visual" style="color: #474747">
-                        <p>Mudar tema visual</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+        <ul class="menu_portlet">
+            <li class="item_menu_portlet">
+                <a href="#registrar-conta">Registrar conta</a>
+            </li>
+            <li class="item_menu_portlet">
+                <a href="#mudar-tema-visual">Mudar tema visual</a>
+            </li>
+            <li class="item_menu_portlet">
+                <a href="#registrar-conta">Registrar conta</a>
+            </li>
+
+        </ul>
     
 </div>

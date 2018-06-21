@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="++theme++siproquim2/favicon.ico" type="image/x-icon">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
 
@@ -29,59 +30,38 @@
 </head>
 
 <body>
-    <!-- JQuery -->
-<!--     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
- -->
-    <!--JavaScript at end of body for optimized loading-->
-    <!-- <script type="text/javascript" src="./js/materialize.min.js"></script> -->
-
-    <!-- Style css -->
-    <!-- <script type="text/css" src="./css/style.css"></script> -->
-
-    <!-- Import Main.js -->
-    <!-- <script type="text/javascript" src="./js/main.js"></script> -->
-
 
     <!-- Header -->
     <nav>
-        <div class="nav-wrapper black" style="font-style: OpenSans; height: 72px;">
-            <a href="#" class="brand-logo" style="font-size: 20px;font-weight: 600; margin-left: 89px; color: #fff;">Guia Siproquim 2</a>
+        <div class="nav-wrapper black">
+            <a href="#" class="brand-logo"><strong>Guia</strong> Siproquim 2</a>
         </div>
     </nav>
 
     <!-- Header Home Busca -->
     <div class="row background-busca">
-        <div class="container" style="width: 662px;">
-            <div class="col xl12 l12 m12 s8">
+        <div class="box_header">
+            <div>
                 <h4 class="header-titulo">Bem vindo ao Guia Siproquim 2</h4>
             </div>
-
             <!-- Input Busca -->
-            <div class="col xl12 l12 m12 s8">
+            <div class="box_busca_home">
+                <form class="Search box-form-busca-index" id="busca_home">
 
-                <div style="text-align: center;width:100%">
-                    <form class="Search box-form-busca-index" id="busca_home">
-
-                        <input style="width: 600px ;border:none; margin: 0; padding: 0; box-shadow: none" placeholder="O que você procura?"
-                        name="SearchableText" />
-                        
-
-                        <a href="./pages/busca.html" class="btn-smalll" style="border:none;padding:0;margin:0;position:absolute;right:0;background:none;background:none;box-shadow:none;">
-                            <i class="material-icons" style="width:35px;height:60px;line-height:60px">search</i>
-                        </a>
-                    </form>
-                </div>
-                <div class="col" style="margin-top: 20px ;text-align: center; color: #ffffff;">
-                    <p>Você também pode escolher um dos tópicos abaixo para encontrar respostas sobre o sistema e receber instruções
-                        passo a passo.</p>
-                </div>
-
+                    <input style="width: 600px ;border:none; margin: 0; padding: 0; box-shadow: none" placeholder="O que você procura?"
+                    name="SearchableText" />
+                    
+                    <a href="./pages/busca.html" class="btn-smalll" style="border:none;padding:0;margin:0;position:absolute;right:0;background:none;background:none;box-shadow:none;">
+                        <i class="material-icons" style="width:35px;height:60px;line-height:60px">search</i>
+                    </a>
+                </form>
             </div>
+            <div class="txt_home">
+                    <p>Você também pode escolher um dos tópicos abaixo para encontrar respostas sobre o sistema e receber instruções passo a passo.</p>
+            </div>  
         </div>
-
-        <!-- Conteúdo -->
     </div>
+
     <div class="container">
         <div id="main_content" class="row">
         </div>

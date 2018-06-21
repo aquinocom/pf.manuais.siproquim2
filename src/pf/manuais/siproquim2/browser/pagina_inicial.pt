@@ -5,49 +5,9 @@
 </head>
 <body metal:fill-slot="main">
 <style type="text/css">
-    #portal-breadcrumbs{display: none;}
-    .box_lista_folders{
-        width: 60%;
-        float: left;
-    }
-    .box_full{}
-    .box_portlet{
-        width: 60%;
-        float: right;
-        width: 336px; 
-        /*position: fixed;*/
-        /*right: 220px;
-        top: 400px;*/
-    }
-    .menu_portlet{
-        transition: box-shadow .25s;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
-        border-radius: 2px;
-    }
-    .item_menu_portlet{
-        border-left:  3px solid #cfd8dc;
-        color: #474747;
-        padding: 24px;
-        border-radius: 0 0 2px 2px;
-        background-color: #f9fbe7 !important;
-        text-decoration: none;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
-    }
-    .item_menu_portlet:hover{
-        border-left:  3px solid #ffd54f;
-        background-color: #ffecb3 !important;
-    }
-    .item_menu_portlet a{
-        border-bottom: none !important;
-        padding: 30px 0;
-    }
-    #content li{
-        margin-bottom: 0;
-    }
-    #content ul{
-        list-style-type: disc;
-        margin-left: 0em;
-    }
+.nav_subfolders li a:hover{
+    color: #dfdfdf !important;
+}
 </style>
 <!-- <script type="text/javascript" src="++theme++siproquim2/js/jquery.columnizer.js"></script>
 <script>
@@ -71,11 +31,14 @@
         <div>
             <div id="topicos-populares">
                 <h1 class="subtitulo">Tópicos populares</h1>
-                <ul>
+                <ul class="nav_subfolders">
                     <li class="hover-indice" tal:repeat="item topicos_populares">
                         <a href="" tal:attributes="href item/getURL">
+
+
+                            <!-- <i class="material-icons icon">navigate_next</i> -->
                             <span tal:replace="item/Title">Acessar o sistema</span>
-                            <i class="material-icons icon">navigate_next</i>
+                            
                         </a>
                     </li>
                 </ul>
@@ -87,13 +50,13 @@
                      tal:attributes="id item/id">
                     <h1 class="subtitulo" tal:content="item/Title">Subnivel</h1>
                     <div>
-                        <ul>
+                        <ul class="nav_subfolders">
                             <li tal:repeat="item lista">
                                 <a href="" class="hover-indice"
                                    tal:attributes="href item/getURL">
+                                    <!-- <i class="material-icons icon">navigate_next</i> -->
                                     <span tal:replace="item/Title">link subnivel</span>
                                     
-                                    <i class="material-icons icon">navigate_next</i>
                                 </a>
                             </li>
                         </ul>

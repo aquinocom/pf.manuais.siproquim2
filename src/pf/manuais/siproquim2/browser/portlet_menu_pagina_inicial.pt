@@ -1,6 +1,6 @@
 <div class="box_portlet" metal:define-macro="portlet">
     
-    <h1 class="subtitulo">NESTA PÁGINA</h1>
+    <h6 class="subtitulo_portlet">NESTA PÁGINA</h6>
 
     <tal:block tal:define="folders view/getFolders">
         <ul class="menu_portlet">

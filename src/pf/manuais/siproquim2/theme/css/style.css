@@ -16,14 +16,30 @@
     /* Microsoft Edge */
     color: #777777;
 }
+*{
+    font-family: 'Open Sans', sans-serif !important;
+}
 
+.container{
+    width: 90% !important;
+}
+
+.material-icons {
+    font-family: 'Material Icons' !important;
+}
 .brand-logo {
     color: #fff !important;
+    font-size: 20px !important;    
+    margin-left: 89px;
+    left: 0 !important;
+}
+
+.brand-logo strong{
+    font-weight: 600 !important;
 }
 
 textarea {
     height: 160px;
-    
     border-radius: 5px;
     box-shadow: 0 2px 6px 0 #ebedee;
     background-color: #ffffff;
@@ -31,9 +47,7 @@ textarea {
 }
 
 .background-busca {
-    font-style: OpenSans;
-    width: full;
-    height: 294px;
+    /*height: 294px;*/
     background-color: #384750;
 }
 
@@ -53,7 +67,8 @@ textarea {
     margin-bottom: 35px;
     color: #f5a623;
     font-weight: bold;
-    text-align: center
+    text-align: center;
+    font-size: 36px;
 }
 
 .topicos {
@@ -440,4 +455,102 @@ a.hover:hover {
 div.hoverbox:hover{
     border-color:#42a5f5;
     margin-left: 1px;
+}
+
+.txt_home{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff;
+    width: 662px;
+}
+.box_busca_home{
+    width: 581px;
+    margin: 0 auto;
+}
+.box_header{
+ width: 641px;
+margin: 0 auto;   
+}
+
+.subtitulo_portlet{
+    font-size: 13px;
+    font-weight: 600;    
+}
+
+#portal-breadcrumbs{display: none;}
+.box_lista_folders{
+    width: 60%;
+    float: left;
+}
+.box_full{}
+.box_portlet_pagina{
+    width: 315px; 
+    /*position: fixed;*/
+    /*right: 220px;
+    top: 400px;*/
+}
+.box_portlet{
+    float: right;
+    width: 315px; 
+    /*position: fixed;*/
+    /*right: 220px;
+    top: 400px;*/
+}
+.menu_portlet{
+    transition: box-shadow .25s;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 2px;
+    margin-left: 0 !important;
+}
+.item_menu_portlet{
+    border-left: 3px solid #cfd8dc;
+    color: #474747;
+    padding: 24px 15px;
+    border-radius: 0 0 2px 2px;
+    background-color: #f9fbe7 !important;
+    text-decoration: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    display: block !important;
+}
+.item_menu_portlet:hover{
+    border-left:  3px solid #ffd54f;
+    background-color: #ffecb3 !important;
+}
+.item_menu_portlet a{
+    border-bottom: none !important;
+    /*padding: 30px 0;*/
+    color: #263239 !important;
+}
+.item_menu_portlet a:hover{
+    color: #263239 !important;
+}
+#content li{
+    margin-bottom: 0 !important;
+}
+#content ul{
+    list-style-type: disc;
+    margin-left: 0em;
+}
+.nav_subfolders{
+    width: 700px;
+}
+.nav_subfolders li{
+    display: inline-block !important;
+    width: 335px;
+    background: url(++theme++siproquim2/assets/angle-right.png) no-repeat;
+    padding-left: 15px;
+    background-position: left center;
+    font-size: 18px;
+    
+}
+.nav_subfolders li:hover{
+    margin-left: 5px;
+}
+.nav_subfolders li a{
+    border: none !important;
+    color: #263239 !important;
+}
+.nav_subfolders li a:hover{
+    color: #263239 !important;
 }
