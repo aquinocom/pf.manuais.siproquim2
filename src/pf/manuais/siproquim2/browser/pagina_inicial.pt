@@ -5,9 +5,7 @@
 </head>
 <body metal:fill-slot="main">
 <style type="text/css">
-.nav_subfolders li a:hover{
-    color: #dfdfdf !important;
-}
+#portal-breadcrumbs{display: none;}
 </style>
 <!-- <script type="text/javascript" src="++theme++siproquim2/js/jquery.columnizer.js"></script>
 <script>
