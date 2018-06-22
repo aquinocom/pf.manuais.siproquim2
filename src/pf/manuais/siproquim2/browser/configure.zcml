@@ -4,8 +4,12 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="pf.manuais.siproquim2">
 
+
+
+
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
   <include package="z3c.jbot" file="meta.zcml" />
+  
   <browser:jbot
       directory="overrides"
       layer="pf.manuais.siproquim2.interfaces.IPfManuaisSiproquim2Layer"

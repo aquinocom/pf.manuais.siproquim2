@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"  
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="pf.manuais.siproquim2">
+
+    <include package="plone.app.portlets" />
+    
+
+    <plone:portlet
+        name="pf.portlet.nessa_pagina"
+        interface=".nessa_pagina.INessaPaginaPortlet"
+        assignment=".nessa_pagina.Assignment"
+        renderer=".nessa_pagina.Renderer"
+        addview=".nessa_pagina.AddForm"
+    />
+
+</configure>

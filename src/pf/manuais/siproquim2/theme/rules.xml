@@ -19,6 +19,7 @@
 
     <rules css:if-content="#visual-portal-wrapper">
 
+        <merge attributes="class" css:content="body" css:theme="body"/>
         <theme css:if-content=".template-pagina-inicial" href="index.html" />
         <theme css:not-if-content=".template-pagina-inicial" href="pages/interna.html" />
 
@@ -34,29 +35,32 @@
         <replace css:theme="#info_atualizacao" css:content="#viewlet-below-content-title" />
         
         <!-- Tabs -->
-        <replace css:theme-children="#tabs" css:content-children="#portal-globalnav" />
+        <!-- <replace css:theme-children="#tabs" css:content-children="#portal-globalnav" /> -->
 
         <!-- Personal tools -->
-        <replace css:theme="#account-info" css:content="#portal-personaltools" />
+        <!-- <replace css:theme="#account-info" css:content="#portal-personaltools" /> -->
 
         <!-- Search -->
         <copy attributes="action" css:theme="#busca_home" css:content="#portal-searchbox form" />
+
         <copy attributes="name" css:theme="#searchbox .search-query" css:content="#portal-searchbox form .searchField" />
 
         <!-- Edit bar -->
-        <before css:theme-children="#content" css:content="#edit-bar" />
+        <!-- <before css:theme-children="#content" css:content="#edit-bar" /> -->
 
         <!-- Portal messages -->
 
         <!-- Main columns -->
         <replace css:content-children="#portal-columns" css:theme-children="#main_content" />
-        <replace css:content-children="#portal-column-one" css:theme-children="#left-column" />
-        <replace css:content-children="#portal-column-two" css:theme-children="#right-column" />
+        <!-- <replace css:content-children="#portal-column-one" css:theme-children="#left-column" />
+        <replace css:content-children="#portal-column-two" css:theme-children="#right-column" /> -->
 
         <!-- Footer -->
-        <replace css:theme-children="#footer" css:content-children="#portal-footer" />
-        <after css:theme-children="#footer" css:content="#portal-siteactions" />
-
+      <!--   <replace css:theme-children="#footer" css:content-children="#portal-footer" />
+        <after css:theme-children="#footer" css:content="#portal-siteactions" /> -->
+        <!-- <rules css:if-content=".portaltype-document">
+            <drop css:theme=".box_feedbak"/>
+        </rules> -->
     </rules>
 
 </rules>

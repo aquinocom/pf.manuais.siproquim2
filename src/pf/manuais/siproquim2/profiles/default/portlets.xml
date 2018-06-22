@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<portlets>
+    <!--registra os portlets-->
+    <portlet
+        addview="pf.portlet.nessa_pagina"
+        title="PF: ancoras nessa pagina"
+        description="Portlet ancoras nessa pagina"
+    />
+ 
+</portlets>
+

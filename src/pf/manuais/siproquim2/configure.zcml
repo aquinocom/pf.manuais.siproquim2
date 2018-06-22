@@ -10,6 +10,7 @@
   <includeDependencies package="." />
 
   <include package=".browser" />
+  <include package=".portlets" />
 
   <plone:static
       directory="theme"
@@ -19,7 +20,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="Plone Theme: Siproquim2"
+      title="Manuais: Siproquim2"
       directory="profiles/default"
       description="Installs the Plone theme package pf.manuais.siproquim2."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -28,7 +29,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Uninstall: Plone Theme: Siproquim2"
+      title="Uninstall: Manuais: Siproquim2"
       directory="profiles/uninstall"
       description="Uninstalls the Plone theme package pf.manuais.siproquim2."
       provides="Products.GenericSetup.interfaces.EXTENSION"

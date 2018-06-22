@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="++theme++siproquim2/favicon.ico" type="image/x-icon">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
 
@@ -48,12 +48,9 @@
             <div class="box_busca_home">
                 <form class="Search box-form-busca-index" id="busca_home">
 
-                    <input style="width: 600px ;border:none; margin: 0; padding: 0; box-shadow: none" placeholder="O que você procura?"
-                    name="SearchableText" />
+                    <input placeholder="O que você procura?" name="SearchableText" id="busca_home_input" />
                     
-                    <a href="./pages/busca.html" class="btn-smalll" style="border:none;padding:0;margin:0;position:absolute;right:0;background:none;background:none;box-shadow:none;">
-                        <i class="material-icons" style="width:35px;height:60px;line-height:60px">search</i>
-                    </a>
+                    <input value="search" class="material-icons searchButton_home" type="submit">
                 </form>
             </div>
             <div class="txt_home">
@@ -66,37 +63,43 @@
         <div id="main_content" class="row">
         </div>
     </div>
-
-    <!-- Rodapé - Dúvidas Frequentes-->
-
-    <div class="container">
+    <div style="clear: both;"></div>
+    <div class="container" >
         <div class="row linha"></div>
     </div>
-
-    <div class="container" style="width: 662px">
+    <div class="container" style="width: 1078px !important;">
+        
         <div class="col xl12 l12 m12 s8">
             <h2 class="subtitulo-duvidas">Ainda não encontrou o que precisa? </h2>
-        </div>
-    </div>
-    <div class="container box-container">
-            <div class="row box-duvidas" style="float: left;">
-                <i class="medium material-icons icon-duvidas">playlist_add</i>
-                <p class="texto-duvidas">Caso não encontre o que precisa neste guia, acesse as
-                    <a href="#">dúvidas frequentes
-                    </a> no portal da Polícia Federal.</p>
+        </div>    
 
-            </div>
-            <div class="row box-duvidas" style="float:right;">
-                <i class="medium material-icons icon-duvidas">mail_outline</i>
-                <p class="texto-duvidas">Caso ainda possua dúvidas, você pode
-                    <a href="#">entrar em contato</a> com a Divisão de Controle de Produtos Químicos.</p>
+        <div class="container box-container">
+                <div class="row box-duvidas" style="float: left;">
+                    <i class="medium material-icons icon-duvidas">playlist_add</i>
+                    <p class="texto-duvidas">
+                        Caso não encontre o que precisa neste guia, acesse as
+                        <a href="http://www.pf.gov.br/servicos-pf/produtos-quimicos">dúvidas frequentes</a> no portal da Polícia Federal.
+                    </p>
+                </div>
+
+                <div class="row box-duvidas" style="float:right;">
+                    <i class="medium material-icons icon-duvidas">mail_outline</i>
+                    <p class="texto-duvidas">Caso ainda possua dúvidas, você pode
+                        <a href="#">entrar em contato</a> com a Divisão de Controle de Produtos Químicos.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <div class="footer col 12" style="clear: both;"></div>
+    <style type="text/css">
 
+    #content a:hover,
+    dl.portlet a:hover {
+        color: #263239 !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+    }
+    </style>
 </body>
 
 </html>

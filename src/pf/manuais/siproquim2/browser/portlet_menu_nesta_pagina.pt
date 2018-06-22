@@ -1,18 +1,11 @@
-<div class="box_portlet_pagina" metal:define-macro="portlet">
+<div class="box_portlet_pagina" metal:define-macro="portlet" style="position: fixed;"
+    tal:define="ancoras view/getAncorasPortlet">
     
     <h6 class="subtitulo_portlet">NESTA PÁGINA</h6>
 
-        <ul class="menu_portlet">
-            <li class="item_menu_portlet">
-                <a href="#registrar-conta">Registrar conta</a>
-            </li>
-            <li class="item_menu_portlet">
-                <a href="#mudar-tema-visual">Mudar tema visual</a>
-            </li>
-            <li class="item_menu_portlet">
-                <a href="#registrar-conta">Registrar conta</a>
-            </li>
-
-        </ul>
-    
+    <ul class="menu_portlet">
+        <li class="item_menu_portlet" tal:repeat="item ancoras">
+            <a href="#registrar-conta" tal:attributes="href string: #${item}">Registrar conta</a>
+        </li>
+    </ul>
 </div>

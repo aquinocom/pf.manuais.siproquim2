@@ -7,6 +7,8 @@ from Products.ATContentTypes.interfaces import IATFolder
 from plone.memoize.instance import memoize
 from DateTime import DateTime
 
+from bs4 import BeautifulSoup
+
 
 class PaginaInicialView(BrowserView):
     """ view list news
@@ -27,10 +29,10 @@ class PaginaInicialView(BrowserView):
     def getTopicosPopulares(self):
         """Retorna o resultado de uma consulta no catalog.
         """
-        # import pdb; pdb.set_trace()
+        
         catalog = getToolByName(self, 'portal_catalog')
         categoria = "Tópicos populares"
-        folders = catalog(Subject = categoria)
+        folders = catalog(Subject = categoria, exclude_from_nav=False)
         return folders
 
     @memoize
@@ -42,7 +44,7 @@ class PaginaInicialView(BrowserView):
         folders = catalog(object_provides=IATFolder.__identifier__,
                           path={'query':path, 'depth':1},
                           sort_on='getObjPositionInParent',
-
+                          exclude_from_nav=False
                          )
         return folders
 
@@ -54,8 +56,24 @@ class PaginaInicialView(BrowserView):
         catalog = getToolByName(self, 'portal_catalog')
         folders = catalog(path={'query':path, 'depth':1},
                           sort_on='getObjPositionInParent',
+                          exclude_from_nav=False
                          )
         return folders
+
+    def getAncorasPortlet(self):
+        # import pdb; pdb.set_trace()
+        if self.context.Type() == 'Page':
+            html_getText = self.context.getText()
+        else:
+            html_getText = ''
+        soup = BeautifulSoup(html_getText, "lxml")
+        links = []
+        for i in soup.find_all("a"):
+            try:
+                links.append(i['name'])
+            except Exception as e:
+                pass
+        return links
 
     @memoize
     def listNews(self, news):

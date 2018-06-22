@@ -6,6 +6,9 @@
 <body metal:fill-slot="main">
 <style type="text/css">
 #portal-breadcrumbs{display: none;}
+.footer_home{
+    width: 77% !important;
+}
 </style>
 <!-- <script type="text/javascript" src="++theme++siproquim2/js/jquery.columnizer.js"></script>
 <script>
@@ -29,17 +32,28 @@
         <div>
             <div id="topicos-populares">
                 <h1 class="subtitulo">Tópicos populares</h1>
-                <ul class="nav_subfolders">
-                    <li class="hover-indice" tal:repeat="item topicos_populares">
-                        <a href="" tal:attributes="href item/getURL">
-
-
-                            <!-- <i class="material-icons icon">navigate_next</i> -->
-                            <span tal:replace="item/Title">Acessar o sistema</span>
-                            
-                        </a>
-                    </li>
-                </ul>
+               
+                <div class="col s4 topicos">
+                        <ul class="nav_subfolders">
+                            <li tal:repeat="item python: topicos_populares[0:5]">
+                                <a href="" class="hover-indice"
+                                   tal:attributes="href item/getURL">
+                                    <span tal:replace="item/Title">link subnivel</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s4 topicos">
+                        <ul class="nav_subfolders">
+                            <li tal:repeat="item python: topicos_populares[5:10]">
+                                <a href="" class="hover-indice"
+                                   tal:attributes="href item/getURL">
+                                    <span tal:replace="item/Title">link subnivel</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear: both;"></div>
             </div>
 
             <tal:block tal:repeat="item folders">
@@ -47,18 +61,28 @@
                                  lista python: view.getFolderItens(caminho)"
                      tal:attributes="id item/id">
                     <h1 class="subtitulo" tal:content="item/Title">Subnivel</h1>
-                    <div>
+
+                    <div class="col s4 topicos">
                         <ul class="nav_subfolders">
-                            <li tal:repeat="item lista">
+                            <li tal:repeat="item python: lista[0:5]">
                                 <a href="" class="hover-indice"
                                    tal:attributes="href item/getURL">
-                                    <!-- <i class="material-icons icon">navigate_next</i> -->
                                     <span tal:replace="item/Title">link subnivel</span>
-                                    
                                 </a>
                             </li>
                         </ul>
                     </div>
+                    <div class="col s4 topicos">
+                        <ul class="nav_subfolders">
+                            <li tal:repeat="item python: lista[5:10]">
+                                <a href="" class="hover-indice"
+                                   tal:attributes="href item/getURL">
+                                    <span tal:replace="item/Title">link subnivel</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear: both;"></div>
                 </div>
             </tal:block>
 

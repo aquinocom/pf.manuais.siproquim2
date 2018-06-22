@@ -15,7 +15,7 @@ long_description = '\n\n'.join([
 setup(
     name='pf.manuais.siproquim2',
     version='1.0a1',
-    description="An add-on for Plone",
+    description="Manuais PF",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -44,6 +44,7 @@ setup(
         'z3c.jbot',
         'plone.app.theming',
         'plone.app.themingplugins',
+        'beautifulsoup4'
     ],
     extras_require={
         'test': [
