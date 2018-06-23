@@ -1,0 +1,7 @@
+<div id="feedback_form">
+    <h6> Lamentamos por isso! Diga como podemos melhorar: </h6>
+    <form action="@@feedback_return" >
+        <textarea cols="50" name="feedback_txt"></textarea>
+        <input class="btn-large" type="submit" name="form.feedback_comment" value="Enviar Resposta" />
+    </form>
+</div>

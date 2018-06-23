@@ -1,20 +1,22 @@
 <div class="box_portlet" metal:define-macro="portlet">
-    
-    <h6 class="subtitulo_portlet">NESTA PÁGINA</h6>
+    <div class="menu_flutua">
+        <h6 class="subtitulo_portlet">NESTA PÁGINA</h6>
 
-    <tal:block tal:define="folders view/getFolders">
-        <ul class="menu_portlet">
-            <li class="item_menu_portlet">
-                <a href="#topicos-populares">Tópicos populares</a>
-            </li>
-            <tal:block tal:repeat="item folders">
+        <tal:block tal:define="folders view/getFolders">
+            <ul class="menu_portlet">
                 <li class="item_menu_portlet">
-                    <a href="#"
-                       tal:attributes="href string: #${item/id}"
-                       tal:content="item/Title">Mudar tema visual</a>
+                    <a href="#topicos-populares">Tópicos populares</a>
                 </li>
-            </tal:block>
-        </ul>
-    </tal:block>
+                <tal:block tal:repeat="item folders">
+                    <li class="item_menu_portlet">
+                        <a href="#"
+                           tal:attributes="href string: #${item/id}"
+                           tal:content="item/Title">Mudar tema visual</a>
+                    </li>
+                </tal:block>
+            </ul>
+
+        </tal:block>
+    </div>
 </div>
 

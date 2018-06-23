@@ -5,22 +5,11 @@
 </head>
 <body metal:fill-slot="main">
 <style type="text/css">
-#portal-breadcrumbs{display: none;}
-.footer_home{
-    width: 77% !important;
-}
+    #portal-breadcrumbs{display: none;}
+    .footer_home{
+        width: 77% !important;
+    }
 </style>
-<!-- <script type="text/javascript" src="++theme++siproquim2/js/jquery.columnizer.js"></script>
-<script>
-    $(function(){
-        $('#colunas').columnize({
-            columns : 2,
-            
-            buildOnce : true,
-            height : 50,
-        })
-    });
-</script> -->
 
 <div class="box_full">
     

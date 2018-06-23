@@ -91,8 +91,10 @@
 			  <div class="col col s6 offset-s3" style="text-align:center;">
                     <h2 class="font-h2">Este artigo foi útil?</h2>
                     <div class="row" style="margin:0 auto;">
-                            <button type="button" onclick="sim()" id="feedback-sim" class="btn-large" >Sim</button>                   
+                        <form action="@@feedback_return" >
+                            <button type="button" onclick="sim()" id="feedback-sim" class="btn-large" name="teste">Sim</button>                   
                             <button type="button" onclick="nao()" id="feedback-nao" class="btn-large" >Não</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -102,10 +104,12 @@
                 </div>
                  </div>
 	    		<div class="row" id="feedback-text" style="display: none;">
-						<div class="col s6 offset-s3" style="text-align:center;">
+						<div class="col s6 offset-s3" id="feedback_form">
 								<h6> Lamentamos por isso! Diga como podemos melhorar: </h6>
-								<textarea cols="50"></textarea>
-								<a class="btn-large" style="margin:2% 0;">Enviar Resposta</a>
+                                <form action="@@feedback_return" >
+    								<textarea cols="50" name="feedback_txt"></textarea>
+                                    <input class="btn-large" type="submit" name="feedback_comment" value="Enviar Resposta" />
+                                </form>
 						</div>
 				</div>
         </div>

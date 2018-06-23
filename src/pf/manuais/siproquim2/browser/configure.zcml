@@ -52,5 +52,15 @@
       template="portlet_menu_pagina_inicial.pt"
     />
 
+  <!-- Pages -->
+  <browser:page
+      name="feedback_return"
+      for="*"
+      class=".view.FeedbackAddForm"
+      permission="zope2.View"
+      layer="pf.manuais.siproquim2.interfaces.IPfManuaisSiproquim2Layer"
+      
+    />
+
 
 </configure>
