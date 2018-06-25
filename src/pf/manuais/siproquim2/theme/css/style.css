@@ -66,7 +66,7 @@ textarea {
 .header-titulo {
     margin-top: 48px;
     margin-bottom: 35px;
-    color: #f5a623;
+    color: #f5a623 !important;
     font-weight: 600 !important;
     text-align: center;
     font-size: 36px;
@@ -125,6 +125,10 @@ textarea {
     text-align: center;
 }
 
+.box-duvidas-right{float: right !important;}
+
+.box-duvidas-left{float: left !important;}
+
 .texto-duvidas {
     padding-top: 28px;
     padding-left: 121px;
@@ -142,7 +146,7 @@ textarea {
 }
 
 .box-container {
-    width: 949px;
+    width: 949px !important;
     height: 167px;
     margin-bottom: 131px;
     margin-top: 40px;
@@ -564,7 +568,7 @@ margin: 0 auto;
     pointer-events: all !important;
 }
 .searchButton_home{
-   background: none;
+    background: none;
     border: none;
     margin-top: 14px;
     margin-right: 10px;
@@ -576,10 +580,65 @@ margin: 0 auto;
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans',! sans-serif important;
     font-weight: 600 !important;
+    color: #263239 !important;
 }
 
-.box_feedbak{display: none !important;}
+.box_feedbak,
+.portaltype-folder #plone-document-byline,
+.template-search  #plone-document-byline,
+.portaltype-folder .linha_footer,
+.template-search .linha_footer,
+.portaltype-folder .tileFooter{display: none !important;}
 .portaltype-document .box_feedbak{display: block !important;}
 
-.menu_flutua{position: fixed;}
+.menu_flutua{position: fixed; z-index: 100;}
 
+.template-folder_summary_view .tileItem{
+    border: 1px solid #2196F3;
+    padding: 20px 60px 20px 20px;
+    margin: 20px 0;
+    background: url(++theme++siproquim2/assets/seta_folder.png) no-repeat right center;
+}
+.template-folder_summary_view .tileItem h2{
+    margin: 0;
+}
+.template-folder_summary_view .tileItem h2 a{
+    color: #263239 !important;
+}
+
+.template-folder_summary_view #content .tileItem p{
+    margin: 0;
+}
+.template-folder_summary_view #content .tileItem p a{
+    color: #2196F3 !important;
+    border-bottom: none; 
+}
+.linha_footer{
+    height: 2px;
+    opacity: 0.46;
+    border: solid 1px #979797;
+    margin-bottom: 20px
+}
+
+#footer_geral{
+    position: relative !important;
+}
+
+.template-search #content-core dd {
+    margin: 0 0 1em 0em;
+}
+
+.template-search .highlightedSearchTerm {
+    /*background-color: #ffa !important;*/
+    font-weight: 600 !important;
+}
+
+.titulo_search_item{
+    font-size: 24px;
+    font-weight: 600 !important;
+    margin: 0px;
+}
+.titulo_search_item a{
+    border: none !important;
+    color: #384750 !important;
+}
