@@ -585,10 +585,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .box_feedbak,
 .portaltype-folder #plone-document-byline,
-.template-search  #plone-document-byline,
+.template-search #plone-document-byline,
+.template-folder_summary_view #plone-document-byline,
 .portaltype-folder .linha_footer,
 .template-search .linha_footer,
-.portaltype-folder .tileFooter{display: none !important;}
+.template-folder_summary_view .linha_footer,
+.tileFooter{display: none !important;}
 .portaltype-document .box_feedbak{display: block !important;}
 
 .menu_flutua{position: fixed; z-index: 100;}
@@ -641,4 +643,46 @@ h1, h2, h3, h4, h5, h6 {
 .titulo_search_item a{
     border: none !important;
     color: #384750 !important;
+}
+
+.template-search .searchButton_home{
+    position: relative;
+    margin-top: -45px;
+}
+
+.input_busca{
+    border: 1px solid #000 !important;
+    padding-left: 10px !important;
+}
+
+#content ol li {
+    counter-increment: li;
+}
+#content ol, #content ol li {
+    list-style: none;
+    margin-left: 1em !important;
+}
+#content ol li::before {
+    content: counter(li);
+    color: #fff;
+    display: inline-block;
+    width: 29px;
+    margin-left: -1em;
+    background: url(++theme++siproquim2/assets/dot_list.png) no-repeat;
+    padding-left: 4px;
+    padding-top: 5px;
+    font-size: 8pt;
+    height: 31px;
+}
+
+#content .callout, .portletStaticText .callout {
+    background: #eaf1df;
+    padding: 20px 4em;
+}
+
+#content .dica, .portletStaticText .dica {
+    background: #eaf1df url(++theme++siproquim2/assets/dica_icon.png) no-repeat 20px 20px;
+    padding: 20px 4em;
+    border-left: none;
+    clear: both;
 }
