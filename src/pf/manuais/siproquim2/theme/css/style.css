@@ -680,7 +680,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 4em;
 }
 
-#content .dica, .portletStaticText .dica {
+.dica {
     background: #eaf1df url(++theme++siproquim2/assets/dica_icon.png) no-repeat 20px 20px;
     padding: 20px 4em;
     border-left: none;

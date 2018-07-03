@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+ <property name="title">Indexes all content in the site</property>
+
+ <index name="exclude_from_nav" meta_type="BooleanIndex">
+  <indexed_attr value="exclude_from_nav"/>
+ </index>
+
+ <column value="exclude_from_nav"/>
+
+</object>

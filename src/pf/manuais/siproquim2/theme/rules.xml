@@ -24,11 +24,16 @@
         <theme css:not-if-content=".template-pagina-inicial" href="pages/interna.html" />
 
         <!-- Head elements -->
-        <replace css:theme="html head title" css:content="html head title" />
-        <after css:theme-children="html head" css:content="html head base" />
-        <after css:theme-children="html head" css:content="html head script" />
+        <!-- Head: title -->
+        <replace content="/html/head/title[1]" theme="/html/head/title" />
+        <!-- Base tag -->
+        <replace content="/html/head/base" theme="/html/head/base" />
+        <!-- meta tag -->
+        <append content="/html/head/meta" theme="/html/head/meta" />
+        <!-- Pull in Plone CSS -->
         <replace content="/html/head/link | /html/head/style " theme='//*[@id="css_link_plone"]'/>
-
+        <!-- Pull in Plone JS -->
+        <replace content="/html/head/script" theme='//*[@id="js_plone"]'/>
 
         <!-- Logo -->
         <copy attributes="href" css:theme=".brand-logo" css:content="#portal-logo" />
@@ -58,9 +63,9 @@
         <!-- Footer -->
       <!--   <replace css:theme-children="#footer" css:content-children="#portal-footer" />
         <after css:theme-children="#footer" css:content="#portal-siteactions" /> -->
-        <!-- <rules css:if-content=".portaltype-document">
-            <drop css:theme=".box_feedbak"/>
-        </rules> -->
+        <rules css:if-content=".template-atct_edit">
+            <drop css:theme="#js_material"/>
+        </rules>
     </rules>
 
 </rules>
