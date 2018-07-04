@@ -153,20 +153,23 @@ class FeedbackAddForm(BrowserView):
         """
         log = logging.getLogger('createFeedback:')
         folder_conteudo = 'Feedback Admin'
-        # import pdb; pdb.set_trace()
+        
         try:
             pasta_manual = self.context.getPhysicalPath()[2]
         except:
             pasta_manual = self.context.id
 
-        site = getSite()
+        site = getSite().siproquim2
+
         id_folder = queryUtility(IIDNormalizer).normalize(folder_conteudo)
-        
+
         if not hasattr(site, id_folder):
             site.invokeFactory('Folder', id=id_folder, title=folder_conteudo)
 
-        # folderFeedback = getattr(site, id_folder)
-        folderFeedback = getattr(site, pasta_manual)
+        folderFeedback = getattr(site, id_folder)
+        # folderFeedback = getattr(site, pasta_manual)
+        
+        # import pdb; pdb.set_trace()
 
         paginaContext = {'titulo': self.context.Title(),
                          'uid': self.context.UID(),
