@@ -22,6 +22,7 @@
 
 .container{
     width: 90% !important;
+    max-width: 70% !important;
 }
 
 .material-icons {
@@ -29,7 +30,7 @@
 }
 .brand-logo {
     color: #fff !important;
-    font-size: 20px !important;    
+    font-size: 20px !important;
     margin-left: 89px;
     left: 0 !important;
     font-weight: 300;
@@ -102,7 +103,7 @@ textarea {
 }
 
 .subtitulo-duvidas {
-    
+
     height: 26px;
     text-align: center;
     font-size: 28px;
@@ -473,12 +474,12 @@ div.hoverbox:hover{
 }
 .box_header{
  width: 641px;
-margin: 0 auto;   
+margin: 0 auto;
 }
 
 .subtitulo_portlet{
     font-size: 13px;
-    font-weight: 600;    
+    font-weight: 600;
 }
 
 
@@ -488,14 +489,14 @@ margin: 0 auto;
 }
 .box_full{}
 .box_portlet_pagina{
-    width: 315px; 
+    width: 315px;
     /*position: fixed;*/
     /*right: 220px;
     top: 400px;*/
 }
 .box_portlet{
     float: right;
-    width: 315px; 
+    width: 315px;
     /*position: fixed;*/
     /*right: 220px;
     top: 400px;*/
@@ -541,11 +542,11 @@ margin: 0 auto;
 .nav_subfolders li{
     /*display: inline-block !important;*/
     width: 365px;
-    background: url(++theme++siproquim2/assets/angle-right.png) no-repeat;
+    background: url(../assets/angle-right.png) no-repeat;
     padding-left: 15px;
     background-position: left center;
     font-size: 18px;
-    
+
 }
 .nav_subfolders li:hover{
     margin-left: 5px;
@@ -599,7 +600,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid #2196F3;
     padding: 20px 60px 20px 20px;
     margin: 20px 0;
-    background: url(++theme++siproquim2/assets/seta_folder.png) no-repeat right center;
+    background: url(../assets/seta_folder.png) no-repeat right center;
 }
 .template-folder_summary_view .tileItem h2{
     margin: 0;
@@ -613,7 +614,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .template-folder_summary_view #content .tileItem p a{
     color: #2196F3 !important;
-    border-bottom: none; 
+    border-bottom: none;
 }
 .linha_footer{
     height: 2px;
@@ -668,7 +669,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     width: 29px;
     margin-left: -1em;
-    background: url(++theme++siproquim2/assets/dot_list.png) no-repeat;
+    background: url(../assets/dot_list.png) no-repeat;
     padding-left: 4px;
     padding-top: 5px;
     font-size: 8pt;
@@ -681,7 +682,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dica {
-    background: #eaf1df url(++theme++siproquim2/assets/dica_icon.png) no-repeat 20px 20px;
+    background: #eaf1df url(../assets/dica_icon.png) no-repeat 20px 20px;
     padding: 20px 4em;
     border-left: none;
     clear: both;

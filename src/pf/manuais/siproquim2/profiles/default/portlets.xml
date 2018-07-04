@@ -6,6 +6,8 @@
         title="PF: ancoras nessa pagina"
         description="Portlet ancoras nessa pagina"
     />
- 
+  <assignment name="pf-ancoras-nessa-pagina" category="content_type"
+    key="Document" manager="plone.rightcolumn" type="pf.portlet.nessa_pagina"
+    visible="True"/>
 </portlets>
 

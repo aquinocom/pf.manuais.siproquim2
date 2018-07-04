@@ -24,7 +24,7 @@
   <span class="documentModified"
         tal:condition="modified">
     <span style="color: #474747;">
-      Última atualização feita em 
+      Última atualização feita em
     </span>
     <span tal:replace="python:view.toLocalizedTime(modified,long_format=1)">
       August 16, 2001 at 23:35:59

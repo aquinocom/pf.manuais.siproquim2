@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from Products.Five.browser import BrowserView
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFCore.utils import getToolByName
-from Products.ATContentTypes.interfaces import IATFolder
+from Products.ATContentTypes.interfaces import IATFolder, IATDocument
 from plone.memoize.instance import memoize
 from DateTime import DateTime
 
@@ -41,10 +41,10 @@ class PaginaInicialView(BrowserView):
     def getTopicosPopulares(self):
         """Retorna o resultado de uma consulta no catalog.
         """
-        
+
         catalog = getToolByName(self, 'portal_catalog')
         categoria = "Tópicos populares"
-        folders = catalog(Subject = categoria, exclude_from_nav=False)
+        folders = catalog(Subject=categoria, exclude_from_nav=False)
         return folders
 
     @memoize
@@ -54,10 +54,10 @@ class PaginaInicialView(BrowserView):
         catalog = getToolByName(self, 'portal_catalog')
         path = '/'.join(self.context.getPhysicalPath())
         folders = catalog(object_provides=IATFolder.__identifier__,
-                          path={'query':path, 'depth':1},
+                          path={'query': path, 'depth': 1},
                           sort_on='getObjPositionInParent',
                           exclude_from_nav=False
-                         )
+                          )
         return folders
 
     @memoize
@@ -66,14 +66,15 @@ class PaginaInicialView(BrowserView):
         """
         # import pdb; pdb.set_trace()
         catalog = getToolByName(self, 'portal_catalog')
-        folders = catalog(path={'query':path, 'depth':1},
+        folders = catalog(object_provides=[IATFolder.__identifier__, IATDocument.__identifier__],
+                          path={'query': path, 'depth': 1},
                           sort_on='getObjPositionInParent',
                           exclude_from_nav=False
-                         )
+                          )
         return folders
 
     def getAncorasPortlet(self):
-        
+
         if self.context.Type() == 'Page':
             html_getText = self.context.getText()
         else:
@@ -83,7 +84,7 @@ class PaginaInicialView(BrowserView):
         for i in soup.find_all("a"):
             try:
                 links.append(i['name'])
-            except Exception as e:
+            except:
                 pass
         return links
 
@@ -113,7 +114,7 @@ class PaginaInicialView(BrowserView):
 
 
 class FeedbackAddForm(BrowserView):
-    """ 
+    """
     """
     def __init__(self, context, request):
         self.context = context
@@ -126,9 +127,8 @@ class FeedbackAddForm(BrowserView):
             request.set('feedback_txt', feedback_txt_conteudo)
             self.feedback_txt_conteudo = feedback_txt_conteudo
 
-
     def __call__(self):
-        
+
         if 'form.feedback_comment' in self.request.form:
 
             return self.createFeedback(self.feedback_txt_conteudo)
@@ -136,7 +136,7 @@ class FeedbackAddForm(BrowserView):
         return self.index()
 
     @memoize
-    def validateForm(self,feedback_txt_conteudo):
+    def validateForm(self, feedback_txt_conteudo):
 
         if (feedback_txt_conteudo == ''):
             self.errors['feedback_txt'] = "O campo é obrigatório."
@@ -153,30 +153,42 @@ class FeedbackAddForm(BrowserView):
         """
         log = logging.getLogger('createFeedback:')
         folder_conteudo = 'Feedback Admin'
-        
-        try:
-            pasta_manual = self.context.getPhysicalPath()[2]
-        except:
-            pasta_manual = self.context.id
 
-        site = getSite().siproquim2
+        # try:
+        #     pasta_manual = self.context.getPhysicalPath()[2]
+        # except:
+        #     pasta_manual = self.context.id
+
+        site = getSite()
+        id_folder_manual = self.context.getPhysicalPath()[2]
+
+        folder_manual = getattr(site, id_folder_manual)
 
         id_folder = queryUtility(IIDNormalizer).normalize(folder_conteudo)
 
-        if not hasattr(site, id_folder):
-            site.invokeFactory('Folder', id=id_folder, title=folder_conteudo)
+        if not hasattr(folder_manual, id_folder):
+            folder_manual.invokeFactory('Folder',
+                                        id=id_folder,
+                                        title=folder_conteudo,
+                                        exclude_from_nav=True)
+            obj = getattr(folder_manual, id_folder)
+            if obj:
+                obj.setTitle(folder_conteudo)
+                obj.setExcludeFromNav(True)
+                obj.setLayout('folder_listing')
+                obj.reindexObject()
 
-        folderFeedback = getattr(site, id_folder)
+        folderFeedback = getattr(folder_manual, id_folder)
         # folderFeedback = getattr(site, pasta_manual)
-        
+
         # import pdb; pdb.set_trace()
 
         paginaContext = {'titulo': self.context.Title(),
                          'uid': self.context.UID(),
-                         'caminho': '/'.join(self.context.getPhysicalPath()), 
+                         'caminho': '/'.join(self.context.getPhysicalPath()),
                          }
 
-        zope_DT = DateTime() # this is now.
+        zope_DT = DateTime()
         python_dt = zope_DT.asdatetime()
         zope_DT = DateTime(python_dt)
         data_feedback = zope_DT.strftime('%d/%m/%Y-%H:%M')
@@ -184,7 +196,7 @@ class FeedbackAddForm(BrowserView):
 
         # import pdb; pdb.set_trace()
 
-        titulo_content = 'Feedback '+ ' - ' + data_feedback + ' - ' + paginaContext['uid']
+        titulo_content = 'Feedback ' + ' - ' + data_feedback + ' - ' + paginaContext['uid']
         id_content = 'feedback ' + data_feedback + '-' + data_milisecond
         id = queryUtility(IIDNormalizer).normalize(id_content)
 

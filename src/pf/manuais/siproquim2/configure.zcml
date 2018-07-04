@@ -15,12 +15,12 @@
   <plone:static
       directory="theme"
       type="theme"
-      name="siproquim2"
+      name="manuais_pf"
       />
 
   <genericsetup:registerProfile
       name="default"
-      title="Manuais: Siproquim2"
+      title="Manuais da Policia Federal"
       directory="profiles/default"
       description="Installs the Plone theme package pf.manuais.siproquim2."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -29,7 +29,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Uninstall: Manuais: Siproquim2"
+      title="Uninstall: Manuais da Policia Federal"
       directory="profiles/uninstall"
       description="Uninstalls the Plone theme package pf.manuais.siproquim2."
       provides="Products.GenericSetup.interfaces.EXTENSION"
