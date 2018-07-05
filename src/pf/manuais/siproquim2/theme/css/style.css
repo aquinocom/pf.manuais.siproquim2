@@ -658,27 +658,32 @@ h1, h2, h3, h4, h5, h6 {
 
 #content ol li {
     counter-increment: li;
+    margin-bottom: 10px !important;
+    list-style-position: outside;
+    margin-top: 10px;
+
 }
 #content ol, #content ol li {
     list-style: none;
-    margin-left: 1em !important;
 }
 #content ol li::before {
-    content: counter(li);
-    color: #fff;
-    display: inline-block;
-    width: 29px;
-    margin-left: -1em;
-    background: url(../assets/dot_list.png) no-repeat;
-    padding-left: 4px;
-    padding-top: 5px;
-    font-size: 8pt;
-    height: 31px;
+  content: counter(li);
+  background-color: #333;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 15px;
+  margin-left: -2.7em;
+  margin-right: 1em;
+  text-align: right;
+  direction: rtl;
+  font-size: 80%;
 }
 
 #content .callout, .portletStaticText .callout {
-    background: #eaf1df;
-    padding: 20px 4em;
+    background: #eaf1df url(../assets/dica_icon.png) no-repeat 20px 20px !important;
+    padding: 20px 4em !important;
+    border-left: none !important;
+    clear: both !important;
 }
 
 .dica {
@@ -686,4 +691,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 4em;
     border-left: none;
     clear: both;
+}
+
+#content .atencao, .portletStaticText .atencao {
+    background: #eee url(../assets/dica_icon.png) no-repeat 20px 20px;
+    padding: 20px 4em;
+    border-left: none;
+    clear: both;
+}
+
+.image-inline {
+    margin: 20px auto;
+}
+
+li .image-inline  {
+    margin-left: -25px;
 }
