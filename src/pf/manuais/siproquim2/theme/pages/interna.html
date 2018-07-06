@@ -79,34 +79,11 @@
     <!-- Rodapé Artigo útil?-->
     <div class="container" style="width:100%;margin-bottom:80px;">
         <div class="linha_footer"></div>
+
         <div id="info_atualizacao"></div>
 
-           <div class="row box_feedbak">
-			  <div class="col col s6 offset-s3" style="text-align:center;">
-                    <h2 class="font-h2">Este artigo foi útil?</h2>
-                    <div class="row" style="margin:0 auto;">
-                        <form action="@@feedback_return" >
-                            <button type="button" onclick="sim()" id="feedback-sim" class="btn-large" name="teste">Sim</button>
-                            <button type="button" onclick="nao()" id="feedback-nao" class="btn-large" >Não</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="feedback-text-agradecimento" style="display: none;">
-                <div class="col s6 offset-s3" style="text-align:center;">
-                        <h6>Obrigado pelo seu retorno!</h6>
-                </div>
-                 </div>
-	    		<div class="row" id="feedback-text" style="display: none;">
-						<div class="col s6 offset-s3" id="feedback_form">
-								<h6> Lamentamos por isso! Diga como podemos melhorar: </h6>
-                                <form action="@@feedback_return" >
-    								<textarea cols="50" name="feedback_txt"></textarea>
-                                    <input class="btn-large" type="submit" name="feedback_comment" value="Enviar Resposta" />
-                                </form>
-						</div>
-				</div>
-        </div>
+        <div id="feedback_form"></div>
+    </div>
     <!-- Footer -->
     <div class="row footer"></div>
     <style type="text/css">

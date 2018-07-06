@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html metal:use-macro="context/main_template/macros/master">
+<head>
+    <title></title>
+</head>
+<body metal:fill-slot="main">
+<style type="text/css">
+    #portal-breadcrumbs{display: none;}
+    .footer_home{
+        width: 77% !important;
+    }
+    th{width: 25%;}
+    .data_feed{width: 10%;}
+
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Página</th>
+            <th>Sim</th>
+            <th>Não</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr tal:repeat="item lista">
+            <td>
+                <span tal:content="python: view.getFeedbacksPage(item.location)['titulo']">Pagina</span><br>
+                <a href="" title="" tal:attributes="href python: view.getFeedbacksPage(item.location)['link']">ver página</a>
+            </td>
+            <td>data</td>
+            <td>data</td>
+        </tr>
+    </tbody>
+</table>
+
+<table tal:define="lista view/getFeedbacks" class="listing">
+    <h1>Dados de envio de feedbacks</h1>
+    <thead>
+        <tr>
+            <th>Página</th>
+            <th class="data_feed">Data</th>
+            <th>Opinião</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr tal:repeat="item lista">
+            <td>
+                <span tal:content="python: view.getFeedbacksPage(item.location)['titulo']">Pagina</span><br>
+                <span tal:content="python: view.getFeedbacksPage(item.location)['caminho']">Pagina</span><br>
+                <a href="" title="" tal:attributes="href python: view.getFeedbacksPage(item.location)['link']">ver página</a>
+            </td>
+            <td tal:content="python: item.created.strftime('%d/%m/%Y - %H:%M')">data</td>
+            <td>
+                <p tal:content="structure python: item.getObject().getText()">Opinião</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

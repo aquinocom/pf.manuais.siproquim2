@@ -12,8 +12,8 @@ from zope.site.hooks import getSite
 from zope.component import queryUtility
 import logging
 from plone.i18n.normalizer.interfaces import IIDNormalizer
-from DateTime import DateTime
-from plone import api
+# from DateTime import DateTime
+# from plone import api
 from Products.CMFPlone.utils import _createObjectByType
 
 
@@ -27,6 +27,7 @@ class PaginaInicialView(BrowserView):
         self.request = request
         self.errors = {}
         self.url_sucess = self.context.absolute_url()
+        self.utils = getToolByName(self.context, 'plone_utils')
 
     @memoize
     def dateFormat(self, data):
@@ -34,7 +35,7 @@ class PaginaInicialView(BrowserView):
         """
         try:
             return DateTime(data).strftime('%d/%m/%Y')
-        except:
+        except Exception:
             return False
 
     @memoize
@@ -84,7 +85,7 @@ class PaginaInicialView(BrowserView):
         for i in soup.find_all("a"):
             try:
                 links.append(i['name'])
-            except:
+            except Exception:
                 pass
         return links
 
@@ -98,7 +99,7 @@ class PaginaInicialView(BrowserView):
                 try:
                     date = obj.effective.strftime('%Y/%m/%d')
                     time = DateTime(obj.effective).strftime('%Hh%M')
-                except:
+                except Exception:
                     date = obj.created.strftime('%Y/%m/%d')
                     time = DateTime(obj.created).strftime('%Hh%M')
                 data_news = dict(title=obj.Title,
@@ -108,7 +109,7 @@ class PaginaInicialView(BrowserView):
                     dicNews[date] = [data_news]
                 else:
                     dicNews[date].append(data_news)
-            except:
+            except Exception:
                 pass
         return dicNews
 
@@ -121,6 +122,7 @@ class FeedbackAddForm(BrowserView):
         self.request = request
         self.errors = {}
         self.url_sucess = self.context.absolute_url()
+        self.utils = getToolByName(self.context, 'plone_utils')
 
         if 'feedback_txt' in request.form:
             feedback_txt_conteudo = request.form['feedback_txt']
@@ -130,8 +132,10 @@ class FeedbackAddForm(BrowserView):
     def __call__(self):
 
         if 'form.feedback_comment' in self.request.form:
-
-            return self.createFeedback(self.feedback_txt_conteudo)
+            try:
+                return self.createFeedback(self.feedback_txt_conteudo)
+            except Exception:
+                return self.createFeedback('Sim')
 
         return self.index()
 
@@ -220,4 +224,42 @@ class FeedbackAddForm(BrowserView):
             obj.reindexObject()
 
         log.info(id)
+        msg = 'Obrigado pelo seu retorno!'
+        self.utils.addPortalMessage(msg, type='info')
         return self.request.response.redirect(self.url_sucess)
+
+
+class FeedbackAdminView(BrowserView):
+    """ view list news
+    """
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+        self.errors = {}
+        self.url_sucess = self.context.absolute_url()
+        self.utils = getToolByName(self.context, 'plone_utils')
+
+    @memoize
+    def getFeedbacks(self):
+        """Retorna a data formatada.
+        """
+        catalog = getToolByName(self, 'portal_catalog')
+        path = '/'.join(self.context.getPhysicalPath())
+        feedbacks = catalog(object_provides=IATDocument.__identifier__,
+                            path={'query': path, 'depth': 1},
+                            sort_on='Date',
+                            sort_order='reverse',
+                            )
+        return feedbacks
+
+    @memoize
+    def getFeedbacksPage(self, uid):
+        """Retorna a data formatada.
+        """
+        catalog = getToolByName(self, 'portal_catalog')
+        feedbacks = catalog(UID=uid)
+        for item in feedbacks:
+            dic = {'titulo': item.Title,
+                   'caminho': item.Description,
+                   'link': item.getURL()}
+        return dic
