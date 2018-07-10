@@ -14,7 +14,7 @@
 
 </style>
 
-<table>
+<!-- <table>
     <thead>
         <tr>
             <th>Página</th>
@@ -32,7 +32,7 @@
             <td>data</td>
         </tr>
     </tbody>
-</table>
+</table> -->
 
 <table tal:define="lista view/getFeedbacks" class="listing">
     <h1>Dados de envio de feedbacks</h1>
