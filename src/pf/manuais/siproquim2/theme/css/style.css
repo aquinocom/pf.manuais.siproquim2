@@ -714,5 +714,5 @@ li .image-inline  {
 }
 
 .tileItem .documentByLine{
-    display: none;
+    display: none !important;
 }
