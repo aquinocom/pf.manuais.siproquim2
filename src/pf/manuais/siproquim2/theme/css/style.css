@@ -648,12 +648,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .template-search .searchButton_home{
     position: relative;
-    margin-top: -45px;
+    margin-top: -50px;
+    margin-right: -45px;
+
 }
 
 .input_busca{
     border: 1px solid #000 !important;
-    padding-left: 10px !important;
+    padding: 10px 40px 10px 10px !important;
+
 }
 
 #content ol li {
