@@ -594,7 +594,7 @@ h1, h2, h3, h4, h5, h6 {
 .tileFooter{display: none !important;}
 .portaltype-document .box_feedbak{display: block !important;}
 
-.menu_flutua{position: fixed; z-index: 100;}
+.menu_flutua{/*position: fixed;*/ z-index: 100;}
 
 .template-folder_summary_view .tileItem{
     border: 1px solid #2196F3;
@@ -715,4 +715,9 @@ li .image-inline  {
 
 .tileItem .documentByLine{
     display: none !important;
+}
+
+input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea {
+    height: inherit;
+    width: inherit;
 }
