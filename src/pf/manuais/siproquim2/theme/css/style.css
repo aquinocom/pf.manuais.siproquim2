@@ -22,7 +22,7 @@
 
 .container{
     width: 90% !important;
-    max-width: 70% !important;
+    max-width: 90% !important;
 }
 
 .material-icons {
@@ -706,4 +706,13 @@ h1, h2, h3, h4, h5, h6 {
 
 li .image-inline  {
     margin-left: -25px;
+}
+
+#content .documentDescription{
+    margin-bottom: 20px !important;
+    font-weight: normal !important;
+}
+
+.tileItem .documentByLine{
+    display: none;
 }
